@@ -1,2 +1,5 @@
 ---
 # vars file for ansible-role-postfix
+gmail_relay_host: "[smtp.gmail.com]:587"
+gmail_email: "bertrand.simonin@gmail.com"
+gmail_app_password: ""
