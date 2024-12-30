@@ -1,7 +1,7 @@
 ---
 # tasks file for ansible-role-postfix
-#
 tasks:
-  block:
-    - builtins.import_tasks: ubuntu.yml
-  when: ansible_distribution == "Ubuntu"
+    - name: Import tasks for Ubuntu
+      block:
+        - builtins.import_tasks: ubuntu.yml
+      when: ansible_distribution == "Ubuntu"
