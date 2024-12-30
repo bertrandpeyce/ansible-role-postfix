@@ -24,7 +24,7 @@
     dest: /etc/postfix/sasl_passwd
     content: |
       {{ gmail_relay_host }} {{ gmail_email }}:{{ gmail_app_password }}
-    owner: rootst ça sest ça se
+    owner: root
     group: root
     mode: '0600'
 
