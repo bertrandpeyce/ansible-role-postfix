@@ -1,6 +1,10 @@
 ---
 # defaults file for ansible-role-postfix
-do_mail_relay: true
-mail_relay_provider: "gmail"
-domain_name: ""
+domain_name: "mydomain.com"
+do_mail_relay: false
+mail_relay_provider: "" # possible values: gmail
+
+## Gmail configuration
+gmail_email: ""
+gmail_app_password: ""
 

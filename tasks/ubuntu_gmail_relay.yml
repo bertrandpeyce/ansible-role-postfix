@@ -54,3 +54,9 @@
     cmd: postmap /etc/postfix/sasl_passwd
   args:
     creates: /etc/postfix/sasl_passwd.db
+
+- name: Redémarrer Postfix pour appliquer la configuration
+  ansible.builtin.service:
+    name: postfix
+    state: restarted
+    enabled: yes

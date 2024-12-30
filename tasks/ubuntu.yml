@@ -1,6 +1,7 @@
 - name: Update apt cache
   ansible.builtin.apt:
     update_cache: yes
+
 - name: Configure postfix mail type à 'Internet Site'
   ansible.builtin.debconf:
     name: postfix

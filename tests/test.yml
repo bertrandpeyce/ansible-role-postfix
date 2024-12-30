@@ -3,4 +3,10 @@
   remote_user: root
   become: yes
   roles:
-    - ansible-role-postfix
+    - role: ansible-role-postfix
+      vars: 
+        do_mail_relay: true
+        mail_relay_provider: "gmail"
+        domain_name: "mytestdomain.com"
+        gmail_email: "mytestuser@gmail.com"
+        gmail_app_password: "testapppassword"
