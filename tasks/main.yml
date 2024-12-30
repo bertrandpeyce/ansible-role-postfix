@@ -1,2 +1,8 @@
 ---
 # tasks file for ansible-role-postfix
+- name: Import tasks for Ubuntu
+  block:
+    - import_tasks: ubuntu.yml
+    - import_tasks: ubuntu_gmail_relay.yml
+      when: do_mail_relay and mail_relay_provider == "gmail"
+  when: ansible_distribution == "Ubuntu"
